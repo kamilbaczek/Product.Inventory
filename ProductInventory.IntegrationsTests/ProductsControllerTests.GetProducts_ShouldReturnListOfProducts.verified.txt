@@ -1,0 +1,26 @@
+﻿[
+  {
+    Id: 1,
+    Name: Product 1,
+    Description: Description 1,
+    Price: 300.00
+  },
+  {
+    Id: 2,
+    Name: Product 2,
+    Description: Description 2,
+    Price: 450.00
+  },
+  {
+    Id: 3,
+    Name: Product 3,
+    Description: Description 3,
+    Price: 600.00
+  },
+  {
+    Id: 4,
+    Name: Product 4,
+    Description: Description 4,
+    Price: 999.00
+  }
+]
