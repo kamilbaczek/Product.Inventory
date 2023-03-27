@@ -9,13 +9,13 @@ public class ProductContext : DbContext
     {
     }
 
-    public DbSet<Product> Products { get; set; }
+    public DbSet<ProductItem> Products { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Product>(entity =>
+        modelBuilder.Entity<ProductItem>(entity =>
         {
             entity.HasKey(e => e.Id);
             entity.Property(e => e.Name).IsRequired().HasMaxLength(255);

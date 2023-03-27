@@ -2,9 +2,9 @@ namespace Product.Inventory.Logic;
 
 using Controllers;
 
-internal sealed class ProductValidator : IProductValidator
-{
-    public void Validate(Product product)
+public sealed class ProductValidator
+{ 
+    public void Validate(ProductItem product)
     {
         if (product.Price > 100000)
             throw new InvalidOperationException("Price cannot be greater than 100000.");

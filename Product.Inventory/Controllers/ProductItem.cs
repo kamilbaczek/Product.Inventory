@@ -1,6 +1,6 @@
 namespace Product.Inventory.Controllers;
 
-public class Product
+public class ProductItem
 {
     public int Id { get; set; }
 
