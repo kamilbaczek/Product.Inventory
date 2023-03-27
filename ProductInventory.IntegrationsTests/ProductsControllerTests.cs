@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Product.Inventory.Controllers;
 using TestContainers.Container.Abstractions.Hosting;
+using TestContainers.Container.Database.MsSql;
 using VerifyXunit;
 using Xunit;
 using TestContainers.Container.Database.MySql;
@@ -85,15 +86,15 @@ public class GetProductTestCases : IEnumerable<object[]>
 
 public sealed class ProductTestDatabase : IAsyncLifetime
 {
-    private MySqlContainer? _container;
+    private MsSqlContainer? _container;
     internal string? ConnectionString;
 
     public async Task InitializeAsync()
     {
-        _container = new ContainerBuilder<MySqlContainer?>()
+        _container = new ContainerBuilder<MsSqlContainer?>()
             .ConfigureContainer((context, container) =>
             {
-                container!.Password = "testpassword";
+                container!.Password = "testpassfdsfdsf@323423AAAword";
                 container.Username = "testuser";
                 container.DatabaseName = "testdb";
             })
